@@ -1,0 +1,47 @@
+---
+#---------------------------------------------------------------------------#
+#                                  Boss                                     #
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#                               byMrSosukee                                 #
+#---------------------------------------------------------------------------#
+
+Makara-Lv?:
+    Type: Guardian
+    Disguise: Elder_Guardian
+    Health: 200
+    Armor: 8
+    Display: Makara-Lv?
+    Damage: 10
+    Drops:
+        - Diamond 1-64
+        - Prismarine_Shard 1-64
+        - Money 500-6000
+        - Cod 2-6
+    Options:
+        MovementSpeed: 1.5
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 1
+        FollowRange: 60
+        MaxCombatDistance: 10
+        PreventMobKillDrops: False
+        PreventOtherDrops: False
+    Skills:
+        - skill{s=SeaPunch-Makara} @target
+        - skill{s=Asphyxia-Makara} @target
+        - skill{s=Summon-Makara2} @target
+        - skill{s=Summon-Makara} @self
+        - skill{s=Masacre-Players} @target
+        - skill{s=MakaraBurst} @target
+        - command{c="announcer say &4&l(<trigger.name>) &4&lMakara has fallen"} @trigger ~onDeath
+    BossBar:
+        Enabled: True
+        Title: "&f&l&k11&l&bMakara&f&l&k11"
+        Color: RED
+        Style: SOLID
+    Modules:
+        ThreatTable: true
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-boss-makara.670/

@@ -1,0 +1,42 @@
+---
+#---------------------------------------------------------------------------#
+#                                 Skills                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                           Original by: ItsAuben                           #
+#---------------------------------------------------------------------------#
+chainPunch:
+  Cooldown: 10
+  Skills:
+    - message{m="&e&l<mob.name><&co> &e&lFeel my wrath!"} @PlayersInRadius{r=40}
+    - skill{s=punchThrow;repeat=2;repeatInterval=10} @target
+punchThrow:
+  Skills:
+    - teleport @target
+    - look{headOnly=false;immediately=true} @target
+    - effect:explosion @self
+    - damage{amount=5;ignorearmor=false} @target
+    - throw{v=10;vy=4;delay=5} @target
+deathsAgony:
+  Cooldown: 10
+  Skills:
+    - message{m="&e&l<mob.name><&co> &e&lFeel the agony of death!"} @PlayersInRadius{r=40}
+    - sound{s=entity.generic.extinguish_fire;repeat=4;repeatInterval=5} @Self
+    - totem{onTick=poisonCloud;i=4;md=200;yOffset=0.5;hs=1;} @RLNTE{a=5;r=7;s=3;target=self;}
+poisonCloud:
+  Skills:
+    - effect:particlering{p=reddust;radius=2;points=32;amount=1;color=#51B50B;} @Origin
+    - potion{type=POISON;duration=80;level=0;} @PlayersNearOrigin{r=2}
+    - potion{type=BLINDNESS;duration=80;level=1} @PlayersNearOrigin{r=2}
+    - potion{type=SLOW;duration=80;level=2} @PlayersNearOrigin{r=2}
+summonMummy:
+  Cooldown: 20
+  Skills:
+    - message{m="&e&l<mob.name><&co> Let's see how you deal with the dead!"} @PlayersInRadius{r=40}
+    - sound{s=entity.zombie.ambient;repeat=1;repeatInterval=5;} @Origin
+    - Summon{mob=Mummy;amount=2;radius=2;onSurface=true;} @PlayersInRadius{r=40;limit=1;sort=FURTHEST}
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-osiris-lord-of-the-dead.464/

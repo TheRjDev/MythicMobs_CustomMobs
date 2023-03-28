@@ -1,0 +1,94 @@
+---
+#---------------------------------------------------------------------------#
+#                               Skills                                      #
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#                             byMrSosukee                                   #
+#---------------------------------------------------------------------------#
+SeaPunch-Makara:
+  Cooldown: 600
+  Skills:
+    - message{cooldown=60;m="<mob.name><&co> &fHoly magnet!!"} @PlayersInRadius{r=40} ~onTimer:8
+    - pull{v=7;to=true} @PIR{r=40} ~onTimer:60
+    - damage{a=10;i=true} @PIR{r=60} ~onTimer:120
+Asphyxia-Makara:
+  Cooldown: 600
+  Skills:
+    - teleport @target
+    - prison{material=NETHERITE_BLOCK;duration=20;breakable=True} @target
+    - effect:lightning @target
+    - delay 30
+    - effect:lightning @target
+    - damage{a=4:i=true}
+    - damage{a=4:i=true}
+    - damage{a=4:i=true}
+    - delay 60
+    - effect:lightning @target
+    - delay 90
+    - effect:lightning @target
+    - damage{a=4:i=true}
+    - damage{a=4:i=true}
+    - damage{a=4:i=true}
+    - delay 120
+    - effect:lightning @target
+    - delay 150
+    - effect:lightning @target
+    - damage{a=15:i=false}
+    - damage{a=10:i=true}
+Summon-Makara:
+  # Summons 2 Makara Guardians minions
+  Cooldown: 700
+  Skills:
+    - sound{s=mob.wither.death} @self
+    - sound{s=mob.wither.spawn} @self
+    - message{cooldown=60;m="<mob.name><&co> &c&lCome out my creatures, together we shall win!!"} @PlayersInRadius{r=40}
+    - summon{mob=Makara-M;amount=2;noise=5} @Self
+Summon-Makara2:
+  # Summons 4 Makara Drowned minions
+  Cooldown: 700
+  Skills:
+    - sound{s=mob.wither.death} @self
+    - sound{s=mob.wither.spawn} @self
+    - message{cooldown=60;m="<mob.name><&co> &c&lWake up and fight!"} @PlayersInRadius{r=40}
+    - summon{mob=MakaraDrowned-M;amount=4;noise=5} @Self
+Masacre-Players:
+  Cooldown: 600
+  Skills:
+    # Burst of attacks that stuns the players and itself
+    - message{cooldown=30;m="&8&l<mob.name> &6&lEnough!!"} @PlayersInRadius{r=40}
+    - effect:Lightning @PlayersInRadius{r=30}
+    - damage{amount=10;ignorearmor=true} @ThreatTablePlayers
+    - throw{velocity=15;velocityY=0} @PlayersInRadius{r=10}
+    - stun{d=5;f=true} @PlayersInRadius{r=40}
+    - stun{d=60;f=true} @Self
+    - delay 100
+    - stun{d=5;f=true} @PlayersInRadius{r=40}
+    - stun{d=60;f=true} @Self
+    - damage{amount=10;ignorearmor=true} @ThreatTablePlayers
+    - delay 120
+    - stun{d=5;f=true} @PlayersInRadius{r=40}
+    - stun{d=60;f=true} @Self
+    - delay 140
+    - stun{d=5;f=true} @PlayersInRadius{r=40}
+    - stun{d=60;f=true} @Self
+    - damage{amount=10;ignorearmor=true} @RandomThreatTarget
+    - delay 160
+    - effect:Lightning @PlayersInRadius{r=30}
+    - damage{amount=20;ignorearmor=true} @PlayersInRadius{r=30}
+    #- healpercent{m=1} @self
+MakaraBurst:
+  cooldown: 400
+  Skills:
+    - teleport @target
+    - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+    - delay 40
+    - damage{amount=5;ignorearmor=true} @PlayersInRadius{r=5}
+    - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+    - effect:explosion @Self
+Makarakill:
+  Cooldown: 200
+  Skills:
+    - effect:sound
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-boss-makara.670/

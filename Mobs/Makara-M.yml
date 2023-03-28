@@ -1,0 +1,37 @@
+#---------------------------------------------------------------------------#
+#                                Minion                                     #
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#                              byMrSosukee                                  #
+#---------------------------------------------------------------------------#
+
+# Guardian with huge damage
+Makara-M:
+    Type: Guardian
+    Health: 120
+    Armor: 5
+    Display: '&9&lGuardianMakara'
+    Damage: 20
+    Drops:
+        - Cod 0-32
+        - Money 100-1000
+    Options:
+        MovementSpeed: 0.4
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 2
+        FollowRange: 100
+        MaxCombatDistance: 60
+        PreventMobKillDrops: false
+        PreventOtherDrops: true
+        PreventRenaming: true
+    Skills:
+     - damage{a=10;ignorearmor=false} ~onDamage @ThreatTablePlayers
+     - delay 100
+     - damage{a=10;ignorearmor=false} ~onDamage @RandomThreatTarget
+    Modules:
+     ThreatTable: true
+
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-boss-makara.670/

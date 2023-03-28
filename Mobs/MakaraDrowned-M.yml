@@ -1,0 +1,41 @@
+#---------------------------------------------------------------------------#
+#                                Minion                                     #
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#                              byMrSosukee                                  #
+#---------------------------------------------------------------------------#
+
+# Trident drowned with huge damage
+MakaraDrowned-M:
+    Type: DROWNED
+    Health: 100
+    Armor: 5
+    Display: '&9&lMakaraDrowned'
+    Damage: 30
+    Equipment:
+        - TRIDENT HAND
+    Drops:
+        - xp 300-1000
+        - money 50-500
+        - trident 1 0.1
+    Options:
+        MovementSpeed: 0.4
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 2
+        FollowRange: 100
+        MaxCombatDistance: 60
+        PreventMobKillDrops: false
+        PreventOtherDrops: true
+        PreventRenaming: true
+        PreventRandomEquipment: true
+    Skills:
+     - damage{a=10;ignorearmor=false} ~onDamage @ThreatTablePlayers
+     - delay 100
+     - damage{a=10;ignorearmor=false} ~onDamage @RandomThreatTarget
+    Modules:
+     ThreatTable: true
+
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-boss-makara.670/

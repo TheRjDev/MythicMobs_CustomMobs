@@ -1,0 +1,39 @@
+---
+#---------------------------------------------------------------------------#
+#                                 Skills                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                         Original by: BlazinZAA_                           #
+#---------------------------------------------------------------------------#
+SmokeBlastProjectile:
+  Skills:
+    - projectile{hp=true;v=22;onTick=SmokeBlast-Ontick;hRadius=2;vRadius=2;onHit=SmokeBlast-onhit;onEnd=SmokeBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+SmokeBlast-Ontick:
+  Skills:
+    - effect:particlesphere{p=blockcrack;material=BEDROCK;amount=200;radius=2} @Origin
+    - effect:particlesphere{particle=smoke_large;amount=200;radius=2} @Origin
+SmokeBlast-onhit:
+  Skills:
+    - effect:blockmask{m=OBSIDIAN;r=5;d=50} @Origin
+    - effect:flames @Origin
+    - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+    - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+    - damage{amount=7;ignoreArmor=false}
+FireballProjectile:
+  Skills:
+    - projectile{hp=true;v=18;onTick=Fireball-Ontick;hRadius=1.5;vRadius=1.5;OnHit=Fireball-Onhit;OnEnd=Fireball-Onhit;StartYOffset=+8;Interval=1;MaxRange=96}
+Fireball-Ontick:
+  Skills:
+    - effect:particlesphere{particle=flame;amount=200;radius=1.5}  @Origin
+    - effect:particlesphere{p=blockcrack;material=NETHERRACK;amount=100;radius=1.5}  @Origin
+Fireball-Onhit:
+  Skills:
+    - effect:explosion
+    - explosion{yield=0.1;fire=true}
+    - ignite{ticks=100}
+    - damage{amount=6;ignoreArmor=false}
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-surtur-the-fire-giant-boss-mob.189/

@@ -1,0 +1,43 @@
+---
+#---------------------------------------------------------------------------#
+#                                   Boss                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                         Original by: BlazinZAA_                           #
+#---------------------------------------------------------------------------#
+Odin:
+  Type: SKELETON
+  Display: Odin
+  Health: 500
+  Damage: 26
+  #Save skin file on LibsDisguises skins folder
+  #Create the disguise with /savedisguise disguise_name Player "&cname" setSkin skin.png
+  Disguise: Odin
+  Options:
+    MovementSpeed: 0
+    PreventSunburn: true
+    MaxCombatDistance: 16
+    PreventRandomEquipment: true
+  DamageModifiers:
+    - FALL 0
+    - LIGHTNING 0
+  Equipment:
+    - GOLDEN_HELMET HEAD
+  BossBar:
+    Enabled: true
+    Title: "&b&lOdin"
+    Range: 16
+    Color: BLUE
+    Style: SEGMENTED_10
+  Modules:
+    ThreatTable: true
+  Skills:
+    - skill{s=OdinStart} ~onEnterCombat
+    - skill{s=OdinFight} ~onTimer:60
+    - jsonmessage{m="[{'text':'&4&lOdin >> You cannot defeat me!'}]"} @target =50%
+    - jsonmessage{m="[{'text':'&4&lOdin >> I am putting an end to this!'}]"} @target =25%
+#original from:
+#https://mythiccraft.io/index.php?resources/free-odin-the-all-father-boss-mob.188/

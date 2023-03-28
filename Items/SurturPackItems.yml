@@ -1,0 +1,25 @@
+SurtursHelmet:
+  Id: NETHERITE_HELMET
+  Data: 0
+  Amount: 1
+  Display: "&c&l Surturs Helmet"
+  CustomModelData: 500
+  Options:
+    Color: 100,0,0
+    Unbreakable: true
+  Conditions:
+    - wearing{s=HEAD;mmitem=SurtursHelmet} true
+    - holding{mmitem=SurtersHelmet} false
+  Skills:
+    - potion{t=FIRE_RESISTANCE;l=255;d=90;p=false} @Self ~onTimer:60
+  Attributes:
+    Head:
+      Armor: 4
+SurtursTunic:
+  Id: LEATHER_CHESTPLATE
+  Data: 0
+  Amount: 1
+  Display: "&lSurtur's Tunic"
+  Options:
+    Color: 100,0,0
+    Unbreakable: true

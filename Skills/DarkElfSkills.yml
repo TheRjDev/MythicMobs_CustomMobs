@@ -1,0 +1,38 @@
+---
+#---------------------------------------------------------------------------#
+#                                 Skills                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                         Original by: BlazinZAA_                           #
+#---------------------------------------------------------------------------#
+DarkElfPushBack:
+  Skills:
+    # Send message to players in radius
+    - jsonmessage{m="[{'text':'&c&lDark Elf >> &4&lENOUGH!'}]"} @PlayersInRadius{r=5}
+    - delay 5
+    # Throw ball to players in radius
+    - throw{velocity=20;velocityY=5} @EntitiesInRadius{r=6}
+    - damage{amount=8;ignoreArmor=false} @EntitiesInRadius{r=6}
+    # Particles
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=1;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=2;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=3;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=4;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=5;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICKS;radius=6;points=15;amount=200;hS=1;vS=1} @Self
+    - delay 2
+    - effect:particlering{particle=BLOCKCRACK;material=NETHER_BRICK;radius=7;points=15;amount=200;hS=1;vS=1} @Self
+DarkElfBuff:
+  Skills:
+    # - potion{type=SPEED;duration=2187494;level=1;p=false} @Self
+    - potion{type=INCREASE_DAMAGE;duration=2187494;level=1;p=false} @Self
+#original from:
+#https://mythiccraft.io/index.php?resources/free-dark-elf-mini-boss.187/

@@ -1,0 +1,27 @@
+OsirisChestplate:
+  Id: NETHERITE_CHESTPLATE
+  Name: "Osiris Chestplate"
+  Data: 0
+  Amount: 1
+  CustomModelData: 501
+  Display : "&c&l Osiris Chestplate"
+
+  Options:
+    Color: 218,165,32
+    Unbreakable: true
+  Skills:
+  - skill{s=OsirisNightVision}
+  Attributes:
+    Chest:
+      Armor: 9
+OsirisSword:
+  Id: NETHERITE_SWORD
+  Data: 0
+  Display: '&3Great Osiris Sword'
+  Lore:
+  - '&6A powerful sword used by'
+  - '&6osiris.'
+  Enchantments:
+  - DAMAGE_ALL:10
+  - KNOCKBACK:2
+  - SWEEPING_EDGE:2

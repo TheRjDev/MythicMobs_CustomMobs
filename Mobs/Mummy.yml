@@ -1,0 +1,34 @@
+#---------------------------------------------------------------------------#
+#                                 Minion                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                           Original by: ItsAuben                           #
+#---------------------------------------------------------------------------#
+Mummy:
+  Type: ZOMBIE
+  Display: '&7&lReanimated Mummy'
+  Health: 100
+  Damage: 15
+  Disguise: mummy
+  Options:
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    NoAI: false
+    PreventSunburn: true
+    PreventRandomEquipment: true
+    Silent: false
+    FollowRange: 99
+  Drops:
+  - MummyDrops
+  Modules:
+    ThreatTable: true
+  Skills:
+  - command{c="time set night";asCaster=true;asOp=true} ~onSpawn
+  - potion{type=POISON;duration=80;level=0;} @target ~onDamaged 0.5
+
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-osiris-lord-of-the-dead.464/

@@ -1,0 +1,44 @@
+---
+#---------------------------------------------------------------------------#
+#                               Miniboss                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                         Original by: BlazinZAA_                           #
+#---------------------------------------------------------------------------#
+
+DarkElf:
+  Type: SKELETON
+  Display: "&4Dark Elf"
+  Health: 200
+  Damage: 12
+  #Dark Elf skin by: https://skinmc.net/en/profile/PECIOESP.2
+  #Save image on LibsDisguises skins folder
+  #Create the disguise with /savedisguise disguise_name Player "&cname" setSkin skin.png
+  Disguise: PECIOESP
+  Options:
+    MovementSpeed: 0.65
+    PreventSunburn: true
+  DamageModifiers:
+    - FALL 0
+  BossBar:
+    Enabled: true
+    Title: "&4&lDark Elf"
+    Range: 18
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Equipment:
+    - DIAMOND_SWORD HAND
+  Skills:
+    # d=duration on ticks, 20 ticks = 1 second
+    - teleport{spreadh=3;spreadv=2} @target ~onTimer:60
+    - potion{t=BLINDNESS;d=80} @EntitiesInRadius{r=6} ~onTimer:250 # Long time blindness with cooldown
+    - potion{t=BLINDNESS;d=10} @EntitiesInRadius{r=6} ~onCombat # Short time blindness on every attack
+    - skill{s=DarkElfPushBack} @Self ~onDamaged =50%
+    - skill{s=DarkElfBuff} @Self =50%
+    - effect:flames @Self ~onTimer:3 =50%
+    - effect:flames @Self ~onTimer:3 <50%
+#original from:
+#https://mythiccraft.io/index.php?resources/free-dark-elf-mini-boss.187/

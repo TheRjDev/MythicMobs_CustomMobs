@@ -1,0 +1,9 @@
+DraugrDrops:
+  Drops:
+  - GOLD_INGOT 4-6 100%
+  - GOLDEN_APPLE 1-2 20%
+SurturDrops:
+  Drops:
+  - OBSIDIAN 32-64 100%
+  - GOLD_INGOT 16-32 100%
+  - SurtursHelmet 1 100%

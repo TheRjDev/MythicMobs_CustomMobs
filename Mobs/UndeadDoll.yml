@@ -1,0 +1,39 @@
+#---------------------------------------------------------------------------#
+#                               Miniboss                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                            Created by: Ramsus                             #
+#---------------------------------------------------------------------------#
+
+UndeadDoll:
+  Type: ZOMBIE
+  Display: "&4undead"
+  Health: 200
+  #Save skin file on LibsDisguises skins folder
+  #Create the disguise with /savedisguise disguise_name Player "&cname" setSkin skin.png
+  Disguise: undead
+  Damage: 10
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 0 ~onDamaged <15%
+  BossBar:
+    Enabled: false
+    Title: '&4&lUndead'
+    Range: 18
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Drops:
+  - totem_of_undying 1-3 1
+  Equipment:
+  - UndeadSword HAND
+  Skills:
+  - teleport{spreadh=3;spreadv=2} @target ~onTimer:60
+  - skill{s=DarkElfPushBack} @Self ~onDamaged =80%
+  - skill{s=SmashAttack} @Target ~onDamaged =50%
+  - skill{s=DarkElfBuff} @Self =50%
+  - potion{t=LEVITATION;d=30;l=1} @PlayersInRadius{r=5} ~onTimer:400
+  - effect:flames @Self ~onTimer:3 =50%
+  - effect:flames @Self ~onTimer:3 <50%

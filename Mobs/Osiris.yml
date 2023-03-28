@@ -1,0 +1,58 @@
+---
+#---------------------------------------------------------------------------#
+#                                   Boss                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                           Original by: ItsAuben                           #
+#---------------------------------------------------------------------------#
+Osiris:
+  Type: SKELETON
+  Display: Osiris
+  Health: 700
+  Damage: 30
+  Armor: 2
+  Disguise: osiris
+  Drops:
+    - Money 500-6000
+    - OsirisDrops
+  Options:
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    NoAI: false
+    PreventSunburn: true
+    PreventRandomEquipment: true
+    Silent: true
+    FollowRange: 99
+    KnockbackResistance: 0.7
+  DamageModifiers:
+    - BLOCK_EXPLOSION 0
+    - LIGHTNING 0
+    - FALL 0
+    - SUFFOCATION 0
+    - THORNS 0.50
+    - ENTITY_EXPLOSION 0
+    - LAVA 0
+    - FIRE 0.5
+    - PROJECTILE 0 ~onDamaged <15%
+  Modules:
+    ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: "&e&lOsiris <mob.hp> / <mob.mhp>"
+    Color: BLUE
+    Style: SEGMENTED_6
+  Equipment:
+    - OsirisChestplate CHEST
+    - OsirisSword HAND
+  Skills:
+    - effect:lightning @self ~onSpawn
+    - command{c="time set night";asCaster=true;asOp=true} ~onSpawn
+    - randomskill{skills=chainPunch,deathsAgony,OdinBurst} ~onDamaged 0.5
+    - skill{s=summonMummy} ~onDamaged <50% 0.2
+    - effect:Lightning @self ~onDeath
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-osiris-lord-of-the-dead.464/

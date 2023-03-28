@@ -1,0 +1,14 @@
+MakaraBoots:
+  Id: NETHERITE_BOOTS
+  Name: "Makara Boots"
+  Data: 0
+  Amount: 1
+  CustomModelData: 503
+  Display : "&c&l Makara Boots"
+
+  Options:
+    Color: 0,0,255
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Armor: 4

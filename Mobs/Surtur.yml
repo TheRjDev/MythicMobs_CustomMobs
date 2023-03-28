@@ -1,0 +1,58 @@
+---
+#---------------------------------------------------------------------------#
+#                                   Boss                                    #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+#                         Original by: BlazinZAA_                           #
+#---------------------------------------------------------------------------#
+Surtur:
+  Type: GIANT
+  Display: Surtur
+  Health: 500
+  Damage: 26
+  KnockbackResistance: 1
+  BossBar:
+    Enabled: true
+    Title: "&4&lSurtur"
+    Range: 48
+    Style: SOLID
+    Color: RED
+  DamageModifiers:
+    - FALL 0
+    - PROJECTILE 0 ~onDamaged <20%
+    - FIRE -0.5 ~onDamaged <50%
+  Drops:
+    - SurturDrops
+  Options:
+    MovementSpeed: 0.19
+    FollowRange: 64
+    MaxCombatRange: 96
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 movetowardstarget
+    - 3 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 attacker
+    - 2 players
+  Equipment:
+    - SurtursHelmet HEAD
+    - SurtursTunic CHEST
+    - STONE_SWORD HAND
+  Skills:
+    - potion{t=INVISIBILITY;d=2147483647;l=1} @self ~onSpawn
+    - ignite{ticks=2147483647} @self ~onSpawn
+    - potion{t=FIRE_RESISTANCE;d=2147483647;1=1} @self ~onSpawn
+    - effect:flames{hS=30;vS=30} @self ~onTimer:10
+    - randomskill{
+      skills=
+      FireballProjectile,
+      SmokeBlastProjectile
+      } @target ~onTimer:120
+    - rally{types=Draugr;radius=32;ot=false} @Trigger ~onDamaged
+# Original from:
+# https://mythiccraft.io/index.php?resources/free-surtur-the-fire-giant-boss-mob.189/
