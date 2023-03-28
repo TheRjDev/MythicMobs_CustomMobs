@@ -5,7 +5,7 @@
 !.gitignore
 
 # if the files to be tracked are in subdirectories
-!*/Mobs/*
+!./Mobs/*
 !*/Skills/*
 !*/Items/*
 !*/DropTables/*
