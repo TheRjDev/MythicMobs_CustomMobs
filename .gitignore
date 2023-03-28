@@ -3,9 +3,14 @@
 
 # But not these files...
 !.gitignore
+!README.md
 
 # if the files to be tracked are in subdirectories
-!./Mobs/*
-!*/Skills/*
-!*/Items/*
-!*/DropTables/*
+!/Mobs/
+!/Mobs/*
+!/Skills/
+!/Skills/*
+!/Items/
+!/Items/*
+!/DropTables/
+!/DropTables/*
