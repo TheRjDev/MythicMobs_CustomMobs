@@ -53,6 +53,7 @@ Surtur:
       FireballProjectile,
       SmokeBlastProjectile
       } @target ~onTimer:120
+    - summon{mob=Draugr;amount=5;radius=32} @self ~onDamaged =50%
     - rally{types=Draugr;radius=32;ot=false} @Trigger ~onDamaged
 # Original from:
 # https://mythiccraft.io/index.php?resources/free-surtur-the-fire-giant-boss-mob.189/
