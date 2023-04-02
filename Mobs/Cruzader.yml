@@ -1,0 +1,48 @@
+Cruzader:
+  Type: SKELETON
+  Display: Cruzader
+  Health: 150
+  Damage: 26
+  Disguise: cruzader
+  KnockbackResistance: 10
+  BossBar:
+    Enabled: true
+    Title: "&4&lCruzader"
+    Range: 48
+    Style: SOLID
+    Color: RED
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+    - FALL 0
+    - PROJECTILE 0 ~onDamaged <30%
+    - SUFFOCATION 0
+    - THORNS 0
+    - LIGHTNING 0
+    - POISON 2
+    - WITHER 2
+
+  Drops:
+    - Money 500-6000
+    - CruzaderDrops
+  Options:
+    FollowRange: 64
+    MaxCombatRange: 96
+  Equipment:
+    - CruzaderHelmet HEAD
+    - CruzaderChestplate CHEST
+    - CruzaderLeggings LEGS
+    - CruzaderBoots FEET
+    - CruzaderSword MAINHAND
+    - Shield OFFHAND
+  Skills:
+    - shield{amount=30;maxShield=50} @self ~onDamaged =10%
+    - skill:SummonGolem ~onTimer:2000
+    - skill:CruzaderMovements ~onTimer:200
+    - skill:CruzaderThrow ~onTimer:250
+    - skill:CruzaderImplosion ~onTimer:400
+    - shieldbreak{duration=1000} @target ~onDamage =20%
+    - skill:CruzaderStun @target ~onDamage =0%-20%
+    #- summon{mob=Draugr;amount=5;radius=32} @self ~onDamaged =50%
+    #- rally{types=Draugr;radius=32;ot=false} @Trigger ~onDamaged
+    #CruzaderImplosion,

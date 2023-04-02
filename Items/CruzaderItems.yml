@@ -1,0 +1,68 @@
+CruzaderChestplate:
+  Id: CHAINMAIL_CHESTPLATE
+  Name: "Cruzader Chestplate"
+  CustomModelData: 600
+  Display: "&c&l Cruzader Chestplate"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Armor: 10
+      ArmorToughness: 3
+  Enchantments:
+    - THORNS:3
+CruzaderHelmet:
+  Id: CHAINMAIL_HELMET
+  Name: "Cruzader Helmet"
+  CustomModelData: 601
+  Display: "&c&l Cruzader Helmet"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Armor: 4
+      ArmorToughness: 3
+  Enchantments:
+    - THORNS:3
+CruzaderLeggings:
+  Id: CHAINMAIL_LEGGINGS
+  Name: "Cruzader Leggings"
+  CustomModelData: 602
+  Display: "&c&l Cruzader Leggings"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Armor: 8
+      ArmorToughness: 3
+  Enchantments:
+    - THORNS:3
+CruzaderBoots:
+  Id: CHAINMAIL_BOOTS
+  Name: "Cruzader Boots"
+  CustomModelData: 603
+  Display: "&c&l Cruzader Boots"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Armor: 4
+      ArmorToughness: 3
+  Enchantments:
+    - THORNS:3
+
+CruzaderSword:
+  Id: IRON_SWORD
+  Name: "Cruzader Sword"
+  CustomModelData: 604
+  Display: "&c&l Cruzader Sword"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackDamage: 10
+      AttackSpeed: 1.6
+      AttackKnockback: 1
+  Enchantments:
+    - SWEEPING_EDGE:3
+    - DAMAGE_ALL:3

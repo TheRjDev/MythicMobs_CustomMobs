@@ -11,9 +11,9 @@ Makara-Lv?:
     Type: Guardian
     Disguise: Elder_Guardian
     Health: 200
-    Armor: 8
+    Armor: 6
     Display: Makara-Lv?
-    Damage: 10
+    Damage: 8
     Drops:
         - Diamond 1-64
         - Prismarine_Shard 1-64

@@ -1,3 +1,4 @@
+---
 #---------------------------------------------------------------------------#
 #                               Miniboss                                    #
 #---------------------------------------------------------------------------#
@@ -9,28 +10,27 @@
 #---------------------------------------------------------------------------#
 Draugr:
   Type: DROWNED
-  Display: '&a&cDraugr'
+  Display: "&a&cDraugr"
   Health: 120
   Damage: 6
   AIGoalSelectors:
-  - 0 clear
-  - 1 meleeattack
-  - 2 movetowardstarget
-  - 3 randomstroll
+    - 0 clear
+    - 1 meleeattack
+    - 2 movetowardstarget
+    - 3 randomstroll
   AITargetSelectors:
-  - 0 clear
-  - 1 attacker
-  - 2 players
+    - 0 clear
+    - 1 attacker
+    - 2 players
   Equipment:
-  - IRON_HELMET HEAD
-  - STONE_SWORD HAND
+    - IRON_HELMET HEAD
+    - STONE_SWORD HAND
   Drops:
-  - DraugrDrops
+    - DraugrDrops
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.2
     MaxCombatDistance: 16
     FollowRange: 32
     PreventOtherDrops: true
-
 #original from:
 #https://mythiccraft.io/index.php?resources/free-giant-surtur-boss-mob.186/
